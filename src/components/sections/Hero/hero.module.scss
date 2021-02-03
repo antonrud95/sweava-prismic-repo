@@ -78,12 +78,18 @@
             }
         }
     }
-    .first-ornament {
-        display: block;
+    .first-ornament,
+    .second-ornament,
+    .third-ornament,
+    .fourth-ornament,
+    .fifth-ornament {
         position: absolute;
-        background-color: $bluebtn;
+        display: block;
         border-radius: 50%;
         z-index: -1;
+    }
+    .first-ornament {
+        background-color: $bluebtn;
         width: 540px;
         height: 540px;
         left: 111px;
@@ -103,6 +109,27 @@
             top: -300px;
             width: 1032px;
             height: 1032px;
+        }
+    }
+    .second-ornament {
+        background-color: #FFDC5F;
+        width: 65px;
+        height: 65px;
+        left: 70px;
+        top: 1000px;
+        @include breakpoint('small-mobile') {
+            width: 110px;
+            height: 110px;
+            left: 90px;
+            top: 976px;
+        }
+        @include breakpoint('mobile') {
+            left: 555px;
+            top: 580px;
+        }
+        @include breakpoint('tablet') {
+            left: 555px;
+            top: 595px;
         }
     }
 }
