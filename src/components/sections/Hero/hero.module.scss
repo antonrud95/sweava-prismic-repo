@@ -90,11 +90,14 @@
     }
     .first-ornament {
         background-color: $bluebtn;
-        width: 540px;
-        height: 540px;
-        left: 111px;
-        top: 657px;
+        width: 440px;
+        height: 440px;
+        right: -311px;
+        top: 677px;
         @include breakpoint('small-mobile') {
+            width: 540px;
+            height: 540px;
+            right: -230px;
             top: 607px;
         }
         @include breakpoint('mobile') {
@@ -105,7 +108,8 @@
             left: 700px;
         }
         @include breakpoint('desktop') {
-            left: 895px;
+            left: inherit;
+            right: -495px;
             top: -300px;
             width: 1032px;
             height: 1032px;
@@ -145,6 +149,24 @@
         @include breakpoint('desktop') {
             left: 40px;
             top: 445px;
+        }
+    }
+    .fourth-ornament {
+        @include breakpoint('desktop') {
+            background-color: #FFDC5F;
+            width: 222px;
+            height: 222px;
+            left: -35px;
+            top: -91px;
+        }
+    }
+    .fifth-ornament {
+        @include breakpoint('desktop') {
+            background-color: #FFDC5F;
+            width: 50px;
+            height: 50px;
+            left: 746px;
+            top: 155px;
         }
     }
 }
