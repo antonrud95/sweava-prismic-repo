@@ -12,7 +12,12 @@ const IndexPage = ({data}) => {
   console.log(data.allPrismicInfoSection)
   return (
     <Layout>
-      <Hero title={data.allPrismicInfoSection.nodes[0].data.title[0].text} text={'some text'} image={data.allPrismicInfoSection.nodes[0].data.picture.url}/>
+      <Hero 
+        title={data.allPrismicInfoSection.nodes[1].data.title[0].text} 
+        text={data.allPrismicInfoSection.nodes[1].data.description[0].text} 
+        image={data.allPrismicInfoSection.nodes[1].data.picture.url}
+        button={data.allPrismicInfoSection.nodes[1].data.button[0].text}
+      />
     </Layout>
   )
 }

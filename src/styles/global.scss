@@ -11,12 +11,14 @@ body {
 }
 
 .container {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
-    @include breakpoint('desktop') {
-        max-width: 1200px;
-    }
-  }
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  max-width: 1104px;
+}
+.container-fluid {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
 
 li {
   list-style-type: none;
@@ -34,12 +36,13 @@ a {
 }
 
 h1 {
+  font-family: 'Raleway' !important;
   font-size: 40px;
   line-height: 67px;
   font-weight: 700;
   color: #000;
   letter-spacing: 0.2px;
-  @include breakpoint('tablet') {
+  @include breakpoint('desktop') {
     font-size: 60px;
     line-height: 67px;
   }
