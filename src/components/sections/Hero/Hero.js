@@ -26,6 +26,11 @@ const Hero = ({title, text, image, button}) => {
                     </Col>
                 </Row>
             </div>
+            <span className={styles.firstOrnament}/>
+            <span className={styles.secondOrnament}/>
+            <span className={styles.thirdOrnament}/>
+            <span className={styles.fourthOrnament}/>
+            <span className={styles.fifthOrnament}/>
         </Container>
     )
 }
