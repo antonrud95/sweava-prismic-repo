@@ -24,12 +24,32 @@ module.exports = {
       __key: "images",
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/ 
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `raleway\:400,500,600,700` 
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: 'gatsby-source-prismic',
       options: {
         repositoryName: PRISMIC_NAME,
         accessToken: PRISMIC_ACCESS_TOKEN,
         schemas: {
           hero: require('./src/schemas/hero.json'),
+        },
+        shouldDownloadImage: ({ node, key, value }) => {
+          return true
         },
       }
     }

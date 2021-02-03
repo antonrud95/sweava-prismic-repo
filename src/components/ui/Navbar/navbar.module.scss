@@ -1,0 +1,29 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.navbar {
+    background-color: transparent;
+    padding: 40px 0;
+    @include breakpoint('tablet') {
+        padding: 60px 0;
+    }
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        .burger-line {
+            display: block;
+            width: 20px;
+            height: 3px;
+            border-radius: 20px;
+            background-color: $burger;
+            opacity: 0.6;
+            margin-bottom: 3px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @include breakpoint('tablet') {
+            display: none;
+        }
+    }
+}
