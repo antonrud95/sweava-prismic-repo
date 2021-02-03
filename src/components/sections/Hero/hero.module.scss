@@ -132,4 +132,19 @@
             top: 595px;
         }
     }
+    .third-ornament {
+        background-color: #FAB8C3;
+        width: 58px;
+        height: 58px;
+        left: 49px;
+        top: 730px;
+        @include breakpoint('small-mobile') {
+            left: 49px;
+            top: 630px;
+        }
+        @include breakpoint('desktop') {
+            left: 40px;
+            top: 445px;
+        }
+    }
 }
