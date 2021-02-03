@@ -1,3 +1,10 @@
+require('dotenv').config()
+
+const {
+  PRISMIC_NAME,
+  PRISMIC_ACCESS_TOKEN,
+} = process.env
+
 module.exports = {
   siteMetadata: {
     title: "test",
@@ -16,5 +23,15 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: 'gatsby-source-prismic',
+      options: {
+        repositoryName: PRISMIC_NAME,
+        accessToken: PRISMIC_ACCESS_TOKEN,
+        schemas: {
+          hero: require('./src/schemas/hero.json'),
+        },
+      }
+    }
   ],
 };
