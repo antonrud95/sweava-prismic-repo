@@ -1,0 +1,41 @@
+@import 'src/styles/variables';
+.button {
+  font-family: 'Raleway' !important;
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 700;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.primary {
+  background-color: $pinkbtn;
+  padding-left: $p-l;
+  padding-right: $p-l;
+  color: $bluebtn;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+.secondary {
+  color: #fff;
+  background-color: $bluebtn;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

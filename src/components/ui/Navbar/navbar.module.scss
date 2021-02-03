@@ -7,6 +7,33 @@
     @include breakpoint('tablet') {
         padding: 60px 0;
     }
+    .desktop-menu {
+        display: none;
+        .nav-link {
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0.2px;
+            font-weight: 600;
+            color: $link;
+            transition: 0.3s ease-in-out;
+            margin-right: 75px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: $hoverlink;
+            }
+        }
+        @include breakpoint('tablet') {
+            display: flex;
+            align-items: center;
+        }
+        .nav-button {
+            @include breakpoint('desktop') {
+                margin-left: 214px;
+            }
+        }
+    }
     .burger-menu {
         display: flex;
         flex-direction: column;
@@ -20,13 +47,21 @@
             background-color: $burger;
             opacity: 0.6;
             margin-bottom: 3px;
-            transition: all 0.1s linear !important;
+            transition: all 0.1s ease-in-out !important;
             &:last-child {
                 margin-bottom: 0;
             }
+            &__first {
+                transform: rotate(45deg) translateY(4px);
+                transform-origin: center;
+            }
+            &__second {
+                transform: rotate(-45deg) translateY(-4px);
+                transform-origin: center;
+            }
         }
         .center-line {
-            transition: all 0.1s linear !important;
+            transition: all 0.1s ease-in-out !important;
         }
         @include breakpoint('tablet') {
             display: none;
