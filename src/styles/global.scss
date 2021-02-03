@@ -33,61 +33,49 @@ a {
   }
 }
 
-// h1 {
-//   font-size: 24px !important;
-//   line-height: 33px !important;
-//   font-weight: 700;
-//   color: $greentext;
-//   margin-bottom: 24px;
-//   @include breakpoint('mobile') {
-//     font-size: 44px !important;
-//     line-height: 62px !important;
-//   }
-//   @include breakpoint('desktop-large') {
-//     font-size: 52px !important;
-//     line-height: 73px !important;
-//   }
-// }
-// h2 {
-//   font-size: 24px !important;
-//   line-height: 33px !important;
-//   font-weight: 700;
-//   color: $greentext;
-//   margin-bottom: 24px;
-//   @include breakpoint('mobile') {
-//     font-size: 44px !important;
-//     line-height: 54px !important;
-//   }
-//   @include breakpoint('desktop-large') {
-//     font-size: 50px !important;
-//     line-height: 60px !important;
-//   }
-// }
-
-// h3 {
-//   font-size: 18px !important;
-//   line-height: 24px;
-//   @include breakpoint('mobile') {
-//     font-size: 26px !important;
-//     line-height: 33px !important;
-//   }
-//   @include breakpoint('desktop-large') {
-//     font-size: 32px !important;
-//     line-height: 39px !important;
-//   }
-// }
-
-// p {
-//   font-size: 16px !important;
-//   line-height: 28px !important;
-//   color: $primary;
-//   margin-bottom: 32px;
-//   @include breakpoint('mobile') {
-//     font-size: 17px !important;
-//     line-height: 39px !important;
-//   }
-//   @include breakpoint('desktop-large') {
-//     font-size: 24px !important;
-//     line-height: 46px !important;
-//   }
-// }
+h1 {
+  font-size: 40px;
+  line-height: 67px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.2px;
+  @include breakpoint('tablet') {
+    font-size: 60px;
+    line-height: 67px;
+  }
+}
+h2 {
+  font-size: 40px;
+  line-height: 47px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.2px;
+  @include breakpoint('tablet') {
+    font-size: 60px;
+    line-height: 67px;
+  }
+}
+h3 {
+  font-size: 34px;
+  line-height: 34px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8);
+  letter-spacing: 0.1px;
+  @include breakpoint('tablet') {
+    font-size: 44px;
+    line-height: 44px;
+  }
+}
+h4 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  color: $bluebtn;
+}
+p {
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 500;
+  color: $greytext;
+  letter-spacing: 0.2px;
+}
