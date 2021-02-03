@@ -10,17 +10,18 @@ const Hero = ({title, text, image, button}) => {
     return(
         <Container fluid className={styles.hero}>
             <div className={styles.heroWrapper}>
-                <Row>
-                    <Col xs="12" md="6" className={styles.contentWrapper}>
-                        <h1>{title}</h1>
-                        <p>{text}</p>
+                <Row className={styles.heroRow}>
+                    <Col xs="12" md="5" xl="12" className={styles.contentWrapper}>
+                        <h1 className={styles.contentTitle}>{title}</h1>
+                        <p className={styles.contentText}>{text}</p>
                         <Button
                             variant="secondary"
+                            additionalClasses={styles.heroButton}
                         >
                             {button}
                         </Button>
                     </Col>
-                    <Col xs="12" md="6" className={styles.imageWrapper}>
+                    <Col xs="12" md="7" className={styles.imageWrapper}>
                         <img src={image} alt="heroimage" className={styles.image}/>
                     </Col>
                 </Row>
