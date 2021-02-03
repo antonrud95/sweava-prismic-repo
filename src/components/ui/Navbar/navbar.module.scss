@@ -10,6 +10,8 @@
     .burger-menu {
         display: flex;
         flex-direction: column;
+        cursor: pointer;
+        
         .burger-line {
             display: block;
             width: 20px;
@@ -18,9 +20,13 @@
             background-color: $burger;
             opacity: 0.6;
             margin-bottom: 3px;
+            transition: all 0.1s linear !important;
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+        .center-line {
+            transition: all 0.1s linear !important;
         }
         @include breakpoint('tablet') {
             display: none;
