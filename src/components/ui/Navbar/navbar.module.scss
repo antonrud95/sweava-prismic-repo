@@ -7,38 +7,70 @@
     @include breakpoint('tablet') {
         padding: 60px 0;
     }
+    .nav-link {
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.2px;
+        font-weight: 600;
+        color: $link;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        margin-bottom: 20px;
+        @include breakpoint('tablet') {
+            margin-bottom: 0;
+            margin-left: 75px;
+            text-align: left;
+        }
+        &:hover {
+            color: $hoverlink;
+        }
+    }
     .desktop-menu {
         display: none;
-        .nav-link {
-            font-size: 16px;
-            line-height: 28px;
-            letter-spacing: 0.2px;
-            font-weight: 600;
-            color: $link;
-            transition: 0.3s ease-in-out;
-            margin-right: 75px;
-            &:last-child {
-                margin-right: 0;
-            }
-            &:hover {
-                color: $hoverlink;
-            }
-        }
         @include breakpoint('tablet') {
             display: flex;
             align-items: center;
         }
         .nav-button {
+            @include breakpoint('tablet') {
+                margin-left: 100px;
+            }
             @include breakpoint('desktop') {
                 margin-left: 214px;
             }
+        }
+    }
+    .mobile-menu {
+        transform: translateX(-100%);
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        background-color: #e6e6e6;
+        &__active {
+            transform: translateX(0);
+        }
+        @include breakpoint('tablet') {
+            display: none;
+        }
+        .links-wrapper {
+            margin-bottom: 40px;
         }
     }
     .burger-menu {
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        
+        position: relative;
+        z-index: 1000;
         .burger-line {
             display: block;
             width: 20px;
