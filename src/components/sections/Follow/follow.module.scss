@@ -1,0 +1,36 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.follow-wrapper {
+    padding: 110px 15px 25px 15px !important;
+    .follow-title {
+        text-align: center;
+        @include breakpoint('mobile') {
+            text-align: left;
+        }
+    }
+    .image-wrapper {
+        position: relative;
+        padding: 0;
+        @include breakpoint('mobile') {
+            margin-top: -50px;
+        }
+        @include breakpoint('desktop') {
+            margin-top: -80px;
+        }
+        .image {
+            width: 100%;
+        }
+    }
+    .copyright {
+        display: block;
+        text-align: center;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 0.1px;
+        font-weight: 700;
+        .normal {
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}

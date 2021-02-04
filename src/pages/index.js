@@ -6,13 +6,11 @@ import Hero from "../components/sections/Hero/Hero"
 import Info from "../components/sections/Info/Info"
 import Products from "../components/sections/Products/Products"
 import Downloads from "../components/sections/Downloads/Downloads"
+import Follow from "../components/sections/Follow/Follow"
 
 import '../styles/index.scss'
 
-
-
 const IndexPage = ({data}) => {
-  console.log(data.allPrismicInfoSection)
   return (
     <Layout>
       <Hero 
@@ -46,6 +44,10 @@ const IndexPage = ({data}) => {
         image={data.allPrismicInfoSection.nodes[4].data.picture.url}
         title={data.allPrismicInfoSection.nodes[4].data.title[0].text}
         button={data.allPrismicInfoSection.nodes[4].data.button[0].text}
+      />
+      <Follow 
+        title={data.allPrismicInfoSection.nodes[5].data.title[0].text}
+        image={data.allPrismicInfoSection.nodes[5].data.picture.url}
       />
     </Layout>
   )
