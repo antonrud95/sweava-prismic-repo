@@ -2,13 +2,49 @@
 @import 'src/styles/variables';
 
 .products-wrapper {
+    padding-top: 60px;
+    padding-bottom: 80px;
     .row {
+        @include breakpoint('mobile') {
+            background: linear-gradient(72.77deg, #EDEEF6 11.72%, rgba(237, 238, 246, 0) 98.52%);
+            border-radius: 50px;
+        }
+        @include breakpoint('tablet') {
+            padding-left: 55px;
+        }
+        .content-wrapper {
+            @include breakpoint('mobile') {
+                padding-top: 150px;
+            }
+            .products-title {
+                text-align: center;
+                margin-bottom: 16px;
+                @include breakpoint('mobile') {
+                    text-align: left;
+                }
+            }
+            .products-text {
+                text-align: center;
+                padding: 0 40px;
+                margin-bottom: 25px;
+                @include breakpoint('mobile') {
+                    text-align: left;
+                    padding: 0;
+                }
+            }
+        }
         .image-wrapper {
             position: relative;
             max-width: 356px;
             padding: 0;
+            margin: 0 auto;
             .image {
                 width: 100%;
+            }
+            @include breakpoint('mobile') {
+                padding: 15px 0 0 0;
+                margin: 0;
+                margin-left: auto;
             }
         }
     }

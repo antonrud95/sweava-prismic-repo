@@ -1,9 +1,9 @@
 {
   "Main" : {
-    "id" : {
+    "numeration" : {
       "type" : "Number",
       "config" : {
-        "label" : "ID"
+        "label" : "Numeration"
       }
     },
     "sectiontitle" : {
