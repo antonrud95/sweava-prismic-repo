@@ -1,0 +1,15 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.products-wrapper {
+    .row {
+        .image-wrapper {
+            position: relative;
+            max-width: 356px;
+            padding: 0;
+            .image {
+                width: 100%;
+            }
+        }
+    }
+}

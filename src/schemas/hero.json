@@ -1,5 +1,11 @@
 {
   "Main" : {
+    "id" : {
+      "type" : "Number",
+      "config" : {
+        "label" : "ID"
+      }
+    },
     "sectiontitle" : {
       "type" : "StructuredText",
       "config" : {
@@ -40,7 +46,7 @@
       "config" : {
         "constraint" : { },
         "thumbnails" : [ ],
-        "label" : "mobilepicture"
+        "label" : "Mobilepicture"
       }
     },
     "picture" : {
