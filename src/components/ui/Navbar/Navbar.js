@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'gatsby';
 import {Container, Navbar, Nav} from 'react-bootstrap';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 import classnames from 'classnames'
 
 import Logo from '../Logo/Logo';
@@ -9,11 +10,22 @@ import styles from './navbar.module.scss'
 
 const SNavbar = () => {
     const [click, setClick] = useState(false)
+    const [isOnTop, setOnTop] = useState(true)
     const clickedBurger = () => {
         setClick(!click)
     }
+    useScrollPosition(
+        ({ prevPos, currPos }) => {
+          if (currPos.y >= -50) {
+            setOnTop(true)
+          } else {
+            setOnTop(false)
+          }
+        },
+        [isOnTop]
+      )
     return(
-        <Navbar fixed="top" className={styles.navbar}>
+        <Navbar fixed="top" className={!isOnTop ? classnames(styles.navbar, styles.navbar__light) : styles.navbar}>
             <Container>
                 <Logo />
                 <Nav className={styles.desktopMenu}>
