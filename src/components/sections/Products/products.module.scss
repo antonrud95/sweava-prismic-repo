@@ -3,10 +3,10 @@
 
 .products-wrapper {
     padding-top: 60px;
-    padding-bottom: 80px;
     position: relative;
     @include breakpoint('tablet') {
         padding-top: 90px;
+        padding-bottom: 80px;
     }
     .row {
         @include breakpoint('mobile') {

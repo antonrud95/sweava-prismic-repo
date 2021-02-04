@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import {Container, Row, Col} from 'react-bootstrap'
 
-import styles from './account.module.scss'
+import styles from './info.module.scss'
 
-const Account = ({sectionTitle, image, mobileimage, upperTitle, title, text}) => {
+const Info = ({sectionTitle, image, mobileimage, upperTitle, title, text}) => {
     return(
         <Container className={styles.accountWrapper}>
             <h3 className={styles.mainTitle}>{sectionTitle}</h3>
@@ -22,12 +22,12 @@ const Account = ({sectionTitle, image, mobileimage, upperTitle, title, text}) =>
         </Container>
     )
 }
-Account.propTypes = {
-    sectionTitle: PropTypes.string.isRequired,
+Info.propTypes = {
+    sectionTitle: PropTypes.string,
     upperTitle: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     image: PropTypes.any.isRequired,
     mobileimage: PropTypes.any.isRequired,
 }
-export default Account
+export default Info

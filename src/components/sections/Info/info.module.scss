@@ -39,7 +39,7 @@
         }
         .content-wrapper {
             @include breakpoint('mobile') {
-                padding-top: 50px;
+                padding: 50px 0 0 45px;
             }
             @include breakpoint('tablet') {
                 padding-top: 104px;
