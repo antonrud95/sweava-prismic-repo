@@ -1,29 +1,72 @@
 @import 'src/styles/mixins';
 @import 'src/styles/variables';
 
-.downloads-container {
-    .row {
-        .content-wrapper {
-            .downloads-button {
-                display: none;
-                @include breakpoint('mobile') {
-                    display: block;
-                }
-            }
-        }
-        .image-wrapper {
+.fluid-container {
+    background: #FAB8C5;
+    margin-top: 100px;
+    @include breakpoint('mobile') {
+        background: transparent;
+    }
+    .downloads-container {
+        position: relative;
+        padding-top: 60px;
+        .row {
             position: relative;
-            .image-mobile {
-                width: 100%;
+            @include breakpoint('mobile') {
+                background: #FAB8C5;
+                border-radius: 50px;
+                max-height: 509px;
+            }
+            .content-wrapper {
                 @include breakpoint('mobile') {
+                    position: absolute;
+                    top: 45px;
+                    left: 50px;
+                }
+                @include breakpoint('desktop') {
+                    top: 95px;
+                    left: 100px;
+                }
+                .downloads-button {
                     display: none;
+                    @include breakpoint('mobile') {
+                        display: block;
+                        padding: 0 40px;
+                    }
+                    @include breakpoint('desktop') {
+                        padding: 0 90px;
+                    }
+                }
+                .downloads-title {
+                    font-size: 40px;
+                    line-height: 47px;
+                    font-weight: 700;
+                    text-align: center;
+                    color: $bluebtn;
+                    @include breakpoint('mobile') {
+                        line-height: 57px;
+                        text-align: left;
+                        margin-bottom: 30px;
+                        max-width: 407px;
+                    }
                 }
             }
-            .image {
-                width: 100%;
-                display: none;
-                @include breakpoint('mobile') {
-                    display: block;
+            .image-wrapper {
+                position: relative;
+                max-width: 716px;
+                margin-left: auto;
+                .image-mobile {
+                    width: 100%;
+                    @include breakpoint('mobile') {
+                        display: none;
+                    }
+                }
+                .image {
+                    width: 100%;
+                    display: none;
+                    @include breakpoint('mobile') {
+                        display: block;
+                    }
                 }
             }
         }

@@ -7,19 +7,21 @@ import styles from './downloads.module.scss'
 
 const Downloads = ({image, mobileimage, title, button}) => {
     return(
-        <Container className={styles.downloadsContainer}>
-            <Row className={styles.row}>
-                <Col xs="12" md="7" className={styles.contentWrapper}>
-                    <h2>{title}</h2>
-                    <Button variant="secondary" additionalClasses={styles.downloadsButton}>
-                        {button}
-                    </Button>
-                </Col>
-                <Col xs="12" md="5" className={styles.imageWrapper}>
-                    <img src={mobileimage} alt="mobile" className={styles.imageMobile}/>
-                    <img src={image} alt="desktop" className={styles.image}/>
-                </Col>
-            </Row>
+        <Container fluid className={styles.fluidContainer}>
+            <Container className={styles.downloadsContainer}>
+                <Row className={styles.row}>
+                    <Col xs="12" md="7" className={styles.contentWrapper}>
+                        <h2 className={styles.downloadsTitle}>{title}</h2>
+                        <Button variant="secondary" additionalClasses={styles.downloadsButton}>
+                            {button}
+                        </Button>
+                    </Col>
+                    <Col xs="12" md="12" className={styles.imageWrapper}>
+                        <img src={mobileimage} alt="mobile" className={styles.imageMobile}/>
+                        <img src={image} alt="desktop" className={styles.image}/>
+                    </Col>
+                </Row>
+            </Container>
         </Container>
     )
 }
