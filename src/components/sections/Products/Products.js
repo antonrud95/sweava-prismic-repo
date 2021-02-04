@@ -16,6 +16,10 @@ const Products = ({title, description, image}) => {
                     <img src={image} alt="products" className={styles.image}/>
                 </Col>
             </Row>
+            <span className={styles.firstOrnament}/>
+            <span className={styles.secondOrnament}/>
+            <span className={styles.thirdOrnament}/>
+            <span className={styles.fourthOrnament}/>
         </Container>
     )
 }

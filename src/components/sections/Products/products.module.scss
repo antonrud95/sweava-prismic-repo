@@ -4,6 +4,10 @@
 .products-wrapper {
     padding-top: 60px;
     padding-bottom: 80px;
+    position: relative;
+    @include breakpoint('tablet') {
+        padding-top: 90px;
+    }
     .row {
         @include breakpoint('mobile') {
             background: linear-gradient(72.77deg, #EDEEF6 11.72%, rgba(237, 238, 246, 0) 98.52%);
@@ -47,5 +51,48 @@
                 margin-left: auto;
             }
         }
+    }
+    .first-ornament,
+    .second-ornament,
+    .third-ornament,
+    .fourth-ornament {
+        @include breakpoint('tablet') {
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+        }
+    }
+    .first-ornament {
+        top: -25px;
+        right: 40px;
+        background-color: $bluebtn;
+        width: 87px;
+        height: 87px;
+        z-index: 1000;
+    }
+    .second-ornament {
+        top: 200px;
+        right: -10px;
+        background-color: $bluebtn;
+        width: 31px;
+        height: 31px;
+        z-index: 1000;
+    }
+    .third-ornament {
+        top: 180px;
+        left: 60%;
+        transform: translateX(-60%);
+        background-color: $pinkbtn;
+        width: 63px;
+        height: 63px;
+        z-index: 1000;
+    }
+    .fourth-ornament {
+        bottom: 26px;
+        left: 287px;
+        background-color: $pinkbtn;
+        width: 104px;
+        height: 104px;
+        z-index: 1000;
     }
 }
