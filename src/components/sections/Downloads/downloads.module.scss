@@ -1,0 +1,31 @@
+@import 'src/styles/mixins';
+@import 'src/styles/variables';
+
+.downloads-container {
+    .row {
+        .content-wrapper {
+            .downloads-button {
+                display: none;
+                @include breakpoint('mobile') {
+                    display: block;
+                }
+            }
+        }
+        .image-wrapper {
+            position: relative;
+            .image-mobile {
+                width: 100%;
+                @include breakpoint('mobile') {
+                    display: none;
+                }
+            }
+            .image {
+                width: 100%;
+                display: none;
+                @include breakpoint('mobile') {
+                    display: block;
+                }
+            }
+        }
+    }
+}
