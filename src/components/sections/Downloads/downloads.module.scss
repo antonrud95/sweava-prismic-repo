@@ -4,8 +4,10 @@
 .fluid-container {
     background: #FAB8C5;
     margin-top: 100px;
+    overflow: hidden;
     @include breakpoint('mobile') {
         background: transparent;
+        margin-top: 70px;
     }
     .downloads-container {
         position: relative;
@@ -15,17 +17,17 @@
             @include breakpoint('mobile') {
                 background: #FAB8C5;
                 border-radius: 50px;
-                max-height: 509px;
+                height: 509px;
             }
             .content-wrapper {
+                position: relative;
                 @include breakpoint('mobile') {
-                    position: absolute;
-                    top: 45px;
-                    left: 50px;
+                    padding-top: 40px;
+                    padding-left: 50px;
                 }
                 @include breakpoint('desktop') {
-                    top: 95px;
-                    left: 100px;
+                    padding-top: 92px;
+                    padding-left: 115px;
                 }
                 .downloads-button {
                     display: none;
@@ -52,9 +54,18 @@
                 }
             }
             .image-wrapper {
-                position: relative;
-                max-width: 716px;
+                max-width: 550px;
                 margin-left: auto;
+                padding: 0;
+                @include breakpoint('mobile') {
+                    position: absolute;
+                    right: -90px;
+                    bottom: 0;
+                }
+                @include breakpoint('tablet') {
+                    right: -120px;
+                    max-width: 716px;
+                }
                 .image-mobile {
                     width: 100%;
                     @include breakpoint('mobile') {
