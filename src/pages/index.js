@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 
 import Layout from '../components/Layout'
 import Hero from "../components/sections/Hero/Hero"
+import Account from "../components/sections/Account/Account"
 
 import '../styles/index.scss'
 
@@ -17,6 +18,14 @@ const IndexPage = ({data}) => {
         text={data.allPrismicInfoSection.nodes[1].data.description[0].text} 
         image={data.allPrismicInfoSection.nodes[1].data.picture.url}
         button={data.allPrismicInfoSection.nodes[1].data.button[0].text}
+      />
+      <Account 
+        sectionTitle={data.allPrismicInfoSection.nodes[0].data.sectiontitle[0].text}
+        upperTitle={data.allPrismicInfoSection.nodes[0].data.uppertitle[0].text}
+        title={data.allPrismicInfoSection.nodes[0].data.title[0].text}
+        text={data.allPrismicInfoSection.nodes[0].data.description[0].text}
+        image={data.allPrismicInfoSection.nodes[0].data.picture.url}
+        mobileimage={data.allPrismicInfoSection.nodes[0].data.mobilepicture.url}
       />
     </Layout>
   )
@@ -36,6 +45,9 @@ export const query = graphql`
             text
           }
           picture {
+            url
+          }
+          mobilepicture {
             url
           }
           description {
