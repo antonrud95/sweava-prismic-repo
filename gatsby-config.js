@@ -7,7 +7,10 @@ const {
 
 module.exports = {
   siteMetadata: {
-    title: "test",
+    title: "sweava-site",
+    siteUrl: 'http://localhost:8000',
+    description: 'sweava-site',
+    author: 'anton-rud',
   },
   plugins: [
     "gatsby-plugin-sass",
