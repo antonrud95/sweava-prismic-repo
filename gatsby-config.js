@@ -46,7 +46,7 @@ module.exports = {
         repositoryName: PRISMIC_NAME,
         accessToken: PRISMIC_ACCESS_TOKEN,
         schemas: {
-          hero: require('./src/schemas/hero.json'),
+          page: require('./src/schemas/page.json'),
         },
         shouldDownloadImage: ({ node, key, value }) => {
           return true

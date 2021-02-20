@@ -1,0 +1,257 @@
+{
+  "Main": {
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "hero": [],
+          "infofirst": [],
+          "products_": [],
+          "infosecond": [],
+          "downloads_": [],
+          "follow": []
+        },
+        "choices": {
+          "hero": {
+            "type": "Slice",
+            "fieldset": "Hero",
+            "description": "items for hero section ",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2",
+                  "label": "title"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "text"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              },
+              "button": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                  "label": "button"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "infofirst": {
+            "type": "Slice",
+            "fieldset": "InfoFirst",
+            "description": "info",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "sectiontitle": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2",
+                  "label": "sectiontitle"
+                }
+              },
+              "uppertitle": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3, heading4, heading5, heading6",
+                  "label": "uppertitle"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2",
+                  "label": "title"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "description"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              },
+              "mobileimage": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "mobileimage"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "products_": {
+            "type": "Slice",
+            "fieldset": "Products ",
+            "description": "items for products section",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2",
+                  "label": "title"
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "description"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "infosecond": {
+            "type": "Slice",
+            "fieldset": "InfoSecond",
+            "description": "items for info second section",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "uppertitle": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading3, heading4, heading5, heading6",
+                  "label": "uppertitle"
+                }
+              },
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2",
+                  "label": "title"
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "text"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              },
+              "mobileimage": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "mobileimage"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "downloads_": {
+            "type": "Slice",
+            "fieldset": "Downloads ",
+            "description": "items for download sections",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2",
+                  "label": "title"
+                }
+              },
+              "button": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "paragraph",
+                  "label": "button"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              },
+              "mobileimage": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "mobileimage"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "follow": {
+            "type": "Slice",
+            "fieldset": "Follow",
+            "description": "items for follow section",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1, heading2",
+                  "label": "title"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {},
+                  "thumbnails": [],
+                  "label": "image"
+                }
+              }
+            },
+            "repeat": {}
+          }
+        }
+      }
+    }
+  }
+}

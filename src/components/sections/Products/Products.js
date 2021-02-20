@@ -4,16 +4,16 @@ import PropTypes from 'prop-types';
 
 import styles from './products.module.scss'
 
-const Products = ({title, description, image}) => {
+const Products = ({slice}) => {
     return(
         <Container className={styles.productsWrapper}>
             <Row className={styles.row}>
                 <Col xs="12" md="6" className={styles.contentWrapper}>
-                    <h2 className={styles.productsTitle}>{title}</h2>
-                    <p className={styles.productsText}>{description}</p>
+                    <h2 className={styles.productsTitle}>{slice.primary.title.text}</h2>
+                    <p className={styles.productsText}>{slice.primary.description.text}</p>
                 </Col>
                 <Col xs="12" md="6" className={styles.imageWrapper}>
-                    <img src={image} alt="products" className={styles.image}/>
+                    <img src={slice.primary.image.fluid.src} alt="products" className={styles.image}/>
                 </Col>
             </Row>
             <span className={styles.firstOrnament}/>
@@ -24,8 +24,6 @@ const Products = ({title, description, image}) => {
     )
 }
 Products.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    image: PropTypes.any.isRequired,
+    slice: PropTypes.object.isRequired,
 }
 export default Products

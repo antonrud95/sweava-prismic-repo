@@ -6,23 +6,23 @@ import Button from '../../ui/Button/Button'
 
 import styles from './hero.module.scss'
 
-const Hero = ({title, text, image, button}) => {
+const Hero = ({slice}) => {
     return(
         <Container fluid className={styles.hero}>
             <div className={styles.heroWrapper}>
                 <Row className={styles.heroRow}>
                     <Col xs="12" md="5" xl="12" className={styles.contentWrapper}>
-                        <h1 className={styles.contentTitle}>{title}</h1>
-                        <p className={styles.contentText}>{text}</p>
+                        <h1 className={styles.contentTitle}>{slice.primary.title.text}</h1>
+                        <p className={styles.contentText}>{slice.primary.text.text}</p>
                         <Button
                             variant="secondary"
                             additionalClasses={styles.heroButton}
                         >
-                            {button}
+                            {slice.primary.button.text}
                         </Button>
                     </Col>
                     <Col xs="12" md="7" className={styles.imageWrapper}>
-                        <img src={image} alt="heroimage" className={styles.image}/>
+                        <img src={slice.primary.image.fluid.src} alt="heroimage" className={styles.image}/>
                     </Col>
                 </Row>
             </div>
@@ -35,9 +35,6 @@ const Hero = ({title, text, image, button}) => {
     )
 }
 Hero.propTypes = {
-    title: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    image: PropTypes.any.isRequired,
-    button: PropTypes.string.isRequired,
+    slice: PropTypes.object.isRequired,
 }
 export default Hero
