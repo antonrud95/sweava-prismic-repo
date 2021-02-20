@@ -25,7 +25,6 @@ const SNavbar = () => {
         } else {
             return disableBodyScroll(menuRef.current)
         }
-        clearAllBodyScrollLocks()
     }
     useScrollPosition(
         ({ prevPos, currPos }) => {
